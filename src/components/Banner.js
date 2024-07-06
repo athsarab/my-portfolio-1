@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Images
-import Image from '../assets/avatar.svg';
+import Image from '../assets/Athsara_Portfolio.png';
 
 // Icons
 import { FaGithub, FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
@@ -87,11 +87,12 @@ const Banner = () => {
             </motion.div>
           </div>
           <motion.div 
-                        variants={fadeIn('down', 0.4)}
-                        initial="hidden"
-                        whileInView="show"
-                        viewport={{ once: false, amount: 0.7 }}
-          className='hidden lg:flex flex-1 max-w-[320px] lg:max-w-[480px]'>
+            variants={fadeIn('down', 0.4)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.7 }}
+            className='hidden lg:flex flex-1 max-w-[320px] lg:max-w-[480px] mt-[-170px]' // Add negative margin here
+          >
             <img src={Image} alt='avatar' />
           </motion.div>
         </div>

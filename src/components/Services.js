@@ -1,21 +1,30 @@
 import React from 'react';
-import { FaJsSquare, FaPhp, FaCss3Alt, FaJava } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import { fadeIn } from '../variants';
 import { useInView } from 'react-intersection-observer';
-import htmlIcon from '../assets/html.svg'; // Import HTML SVG icon
-import scriptIcon from '../assets/javascript.svg'; // Import HTML SVG icon
-import javaIcon from '../assets/Java-Dark.svg'; // Import HTML SVG icon
-import phpIcon from '../assets/PHP-Dark.svg'; // Import HTML SVG icon
-import css from '../assets/CSS.svg'; // Import HTML SVG icon
+import htmlIcon from '../assets/html.svg';
+import scriptIcon from '../assets/javascript.svg';
+import javaIcon from '../assets/Java-Dark.svg';
+import phpIcon from '../assets/PHP-Dark.svg';
+import cssIcon from '../assets/CSS.svg';
 
-// Update your skills data
+import python from '../assets/python.svg';
+import kotlinIcon from '../assets/kotlin.svg';
+import cIcon from '../assets/c.svg';
+import cppIcon from '../assets/cpp.svg';
+import { fadeIn } from '../variants';
+
+
 const skills = [
-  { name: 'JavaScript', icon: <img src={scriptIcon} alt="script Icon" style={{ width: '50px', height: '50px' }} />, percentage: 80 },
-  { name: 'PHP', icon: <img src={phpIcon} alt="php Icon" style={{ width: '50px', height: '50px' }} />, percentage: 90 },
+  { name: 'JavaScript', icon: <img src={scriptIcon} alt="JavaScript Icon" style={{ width: '50px', height: '50px' }} />, percentage: 80 },
+  { name: 'PHP', icon: <img src={phpIcon} alt="PHP Icon" style={{ width: '50px', height: '50px' }} />, percentage: 90 },
   { name: 'HTML', icon: <img src={htmlIcon} alt="HTML Icon" style={{ width: '50px', height: '50px' }} />, percentage: 95 },
-  { name: 'CSS', icon: <img src={css} alt="css Icon" style={{ width: '50px', height: '50px' }} />, percentage: 75 },
-  { name: 'Java',  icon: <img src={javaIcon} alt="java Icon" style={{ width: '50px', height: '50px' }} />, percentage: 85 },
+  { name: 'CSS', icon: <img src={cssIcon} alt="CSS Icon" style={{ width: '50px', height: '50px' }} />, percentage: 75 },
+  { name: 'Java', icon: <img src={javaIcon} alt="Java Icon" style={{ width: '50px', height: '50px' }} />, percentage: 85 },
+
+  { name: 'Express', icon: <img src={python} alt="python Icon" style={{ width: '50px', height: '50px' }} />, percentage: 70 },
+  { name: 'Kotlin', icon: <img src={kotlinIcon} alt="Kotlin Icon" style={{ width: '50px', height: '50px' }} />, percentage: 95 },
+  { name: 'C', icon: <img src={cIcon} alt="C Icon" style={{ width: '50px', height: '50px' }} />, percentage: 100 },
+  { name: 'C++', icon: <img src={cppIcon} alt="C++ Icon" style={{ width: '50px', height: '50px' }} />, percentage: 100 },
 ];
 
 const Services = () => {
@@ -23,7 +32,6 @@ const Services = () => {
     threshold: 0.5,
   });
 
-  // Calculate the maximum percentage value
   const maxPercentage = Math.max(...skills.map(skill => skill.percentage));
 
   return (
